@@ -1,1 +1,1 @@
-web: gunicorn tweetPy.settings --log-file -
+web: gunicorn tweetPy.wsgi
