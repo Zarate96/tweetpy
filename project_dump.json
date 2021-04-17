@@ -1,0 +1,351 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$sfkkvLhdKW8Q$PB0KsZS9+2JntA177J61tArep4cNc8P+9AGq9UBr6BM=",
+        "last_login": "2021-04-17T01:55:49.054Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-04-15T03:03:24.168Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$RYXgrFdU5g4U$fN1iGN+qzLFATHW08BzXkIifaZaHWiBfcLz8Ve/tHYY=",
+        "last_login": "2021-04-16T17:15:43.473Z",
+        "is_superuser": false,
+        "username": "hugo_zarate",
+        "first_name": "",
+        "last_name": "",
+        "email": "hugazo98g@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-04-15T15:31:58.646Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$9LMAu8U3K0Lf$z/kEl4iBlkUNC/eKrpLEIgTqGcMkAOgI3A7302tAVK4=",
+        "last_login": "2021-04-15T18:56:15.721Z",
+        "is_superuser": false,
+        "username": "araceli",
+        "first_name": "",
+        "last_name": "",
+        "email": "araceli@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-04-15T18:56:02.538Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$EIi3WSOEUJVY$Hc69JcNUXSVcJ5PnCPgoZKBJ2VFChp3hu0jvoOuuEc0=",
+        "last_login": "2021-04-16T17:15:08.426Z",
+        "is_superuser": false,
+        "username": "Fernanda_Ortiz",
+        "first_name": "",
+        "last_name": "",
+        "email": "fernanda@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-04-16T17:14:54.685Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$gBiNZSG4MLwD$0cJRH+vAirXf0tcl8p5/YYHGs/RS7nhNyxOZzEM8QkM=",
+        "last_login": "2021-04-17T02:10:52.737Z",
+        "is_superuser": false,
+        "username": "mario_hernandez",
+        "first_name": "",
+        "last_name": "",
+        "email": "mario@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-04-16T17:17:11.350Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5j1n0lvc5jc32471hgt28jx1a178xgfj",
+    "fields": {
+        "session_data": ".eJxVjMsKwyAQAP_Fc5H1EYw99t5vkNVda9qiEJNT6L8XIYf2OjPMIQLuWwl75zUsJK5iEpdfFjG9uA5BT6yPJlOr27pEORJ52i7vjfh9O9u_QcFexlbxpGaD4LVjNAw5RXA6JVaZHFlQmm02zDFG41HpDGr2CJTJWpe8-HwB8mw4fg:1lXaQ8:P2jiLzwnWIjD8mGkhqGyO-gKB-qMs1Z3umszwW7aQEg",
+        "expire_date": "2021-05-01T02:10:52.758Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 6,
+    "fields": {
+        "title": "Aprende informática en el Día del Programador",
+        "content": "Que la informática nos ha cambiado la vida es innegable. Basta echar una mirada del presente al pasado, a hace solo unas décadas, para observar la diferencia. Y todo ello, o buena parte, gracias a los ordenadores y a sus múltiples posibilidades tecnológicas.\r\n\r\nTambién gracias al trabajo de los programadores, aquellas personas que los hacen funcionar, comunicándose con ellos.\r\n\r\nPor eso, para rendir un pequeño y merecido homenaje a este trabajo tan relevante, hoy celebramos el Día del programador. Que no siempre es el 12 de septiembre, como este 2020, sino que los años no bisiestos es el 13. La regla es que sea el día número 256 del calendario, en un guiño a la cantidad máxima que se puede representar con ocho bits; unidades informáticas.",
+        "date_posted": "2021-04-17T02:01:19Z",
+        "author": [
+            "hugo_zarate"
+        ],
+        "is_validate": true
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 7,
+    "fields": {
+        "title": "Razones de peso para empezar a estudiar programación en 2020",
+        "content": "A la hora de entrar a la universidad y empezar a estudiar una carrera que nos pueda deparar un empleo para toda la vida, hay que buscar un equilibrio entre lo que nos gusta y lo que nos puede dar un buen sueldo, y si eres amante de la tecnología, se te dan bien los números y ante todo eres capaz de trabajar solo y aguantando presión, quizá la programación es algo que puede interesarte bastante.\r\n\r\nEn términos generales los empleos de programación están muy bien pagados, sobre todo en países como Estados Unidos. Además de lo anterior, también cuentas con mayor seguridad dado que se suele trabajar desde casa, hay multitud de oportunidades de mercado, tienes miles de empresas a tu disposición independientemente de que hables o no su idioma y la tecnología está en auge.",
+        "date_posted": "2021-04-17T02:04:17Z",
+        "author": [
+            "mario_hernandez"
+        ],
+        "is_validate": true
+    }
+},
+{
+    "model": "users.profile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "image": "profile_pics/avatar-1.jpg"
+    }
+},
+{
+    "model": "users.profile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "hugo_zarate"
+        ],
+        "image": "profile_pics/img3_7CVD8D2.jpg"
+    }
+},
+{
+    "model": "users.profile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "araceli"
+        ],
+        "image": "profile_pics/avatar-2.jpg"
+    }
+},
+{
+    "model": "users.profile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "Fernanda_Ortiz"
+        ],
+        "image": "profile_pics/avatar-9.jpg"
+    }
+},
+{
+    "model": "users.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "mario_hernandez"
+        ],
+        "image": "profile_pics/car-5.jpg"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-04-15T18:42:22.215Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Lil supa",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is validate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-04-15T18:50:27.176Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "4",
+        "object_repr": "Test post",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is validate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-04-15T18:57:52.667Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "3",
+        "object_repr": "Lobo estepario",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is validate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-04-17T02:01:15.617Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "5",
+        "object_repr": "Nach",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2021-04-17T02:01:15.901Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "4",
+        "object_repr": "Test post",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2021-04-17T02:01:15.938Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "3",
+        "object_repr": "Lobo estepario",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2021-04-17T02:01:15.947Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "2",
+        "object_repr": "Kase O",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2021-04-17T02:01:15.955Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Lil supa",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2021-04-17T02:03:10.925Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "6",
+        "object_repr": "Aprende informática en el Día del Programador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2021-04-17T02:04:40.841Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "blog",
+            "post"
+        ],
+        "object_id": "7",
+        "object_repr": "Razones de peso para empezar a estudiar programación en 2020",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]

@@ -14,7 +14,8 @@ from .models import Post
 
 def home(request):
     context = {
-        'posts':Post.objects.all()
+        'posts':Post.objects.all(),
+        'title': 'Home'
     }
     return render(request, 'blog/home.html',context)
 
@@ -27,7 +28,8 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(PostListView, self).get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context['users'] = User.objects.filter(is_staff=False)
+        context['title'] = 'Inicio'
         return context
 
     def get_queryset(self):
@@ -40,7 +42,8 @@ class UserPostListView(ListView):
     paginate_by = 5
     def get_context_data(self, **kwargs):
         context = super(UserPostListView, self).get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context['users'] = User.objects.filter(is_staff=False)
+        context['title'] = 'Post por usuario'
         return context
 
     def get_queryset(self):
@@ -51,7 +54,8 @@ class PostDetailView(DetailView):
     model = Post
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context['users'] = User.objects.filter(is_staff=False)
+        context['title'] = 'Detalles'
         return context
 
 class PostCreateView(LoginRequiredMixin, CreateView):
@@ -64,7 +68,8 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(PostCreateView, self).get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context['users'] = User.objects.filter(is_staff=False)
+        context['title'] = 'Crear post'
         return context
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -83,7 +88,8 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     
     def get_context_data(self, **kwargs):
         context = super(PostUpdateView, self).get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context['users'] = User.objects.filter(is_staff=False)
+        context['title'] = 'Actualizar post'
         return context
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -98,13 +104,14 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     
     def get_context_data(self, **kwargs):
         context = super(PostDeleteView, self).get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context['users'] = User.objects.filter(is_staff=False)
+        context['title'] = 'Eliminar post'
         return context
 
 def about(request):
     context = {
         'title': 'About',
-        'users':User.objects.all()
+        'users':User.objects.filter(is_staff=False)
     }
     return render(request, 'blog/about.html', context)
     
