@@ -1,0 +1,1 @@
+web: gunicorn tweetPy.settings --log-file -
