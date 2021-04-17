@@ -20,23 +20,39 @@ def home(request):
 
 class PostListView(ListView):
     model = Post
-    template_name = 'blog/home.html'
+    template_name = 'blog/blog.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
+
+    def get_context_data(self, **kwargs):
+        context = super(PostListView, self).get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        return context
+
+    def get_queryset(self):
+        return Post.objects.filter(is_validate=True).order_by('-date_posted')
 
 class UserPostListView(ListView):
     model = Post
     template_name = 'blog/user_posts.html'
     context_object_name = 'posts'
     paginate_by = 5
+    def get_context_data(self, **kwargs):
+        context = super(UserPostListView, self).get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        return context
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
-        return Post.objects.filter(author=user).order_by('-date_posted')
+        return Post.objects.filter(author=user, is_validate=True).order_by('-date_posted')
 
 class PostDetailView(DetailView):
     model = Post
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailView, self).get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        return context
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -45,6 +61,11 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(PostCreateView, self).get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        return context
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
@@ -59,6 +80,11 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
+    
+    def get_context_data(self, **kwargs):
+        context = super(PostUpdateView, self).get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        return context
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
@@ -69,6 +95,16 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+    
+    def get_context_data(self, **kwargs):
+        context = super(PostDeleteView, self).get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        return context
 
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
+    context = {
+        'title': 'About',
+        'users':User.objects.all()
+    }
+    return render(request, 'blog/about.html', context)
+    

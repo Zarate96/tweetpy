@@ -1,9 +1,13 @@
 {% extends "blog/base.html" %}
 {% block content %}
+{% if object.is_validate == False %}
+  <p class="article-content">Tu publicación estará en la sección de inicio cuando haya sido validada,
+  con el fin de evitar contenido indebido. Gracias</p>
+{% endif %}
       <article class="media content-section">
         <img src="{{ object.author.profile.image.url }}" class="rounded-circle article-img" alt="">
         <div class="media-body">
-          <div class="article-metadata">
+          <div class="article-metadata">  
             <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ object.author }}</a>
             <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
             {% if object.author == user %}

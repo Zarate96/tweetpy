@@ -5,16 +5,18 @@
     <form method="POST">
       {% csrf_token %}
       <fieldset class="form-group">
-        <legend class="border-bottom mb-4"> Join today</legend>
+        <legend class="border-bottom mb-4"> Registrate hoy</legend>
         {{ form|crispy }}
       </fieldset>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <div class="g-recaptcha mb-3" data-sitekey="{{recaptcha_site_key}}"></div>
       <div class="form-group">
-        <button class="btn btn-outline-info" name="button" type="submit">Sign up</button>
+        <button class="btn btn-outline-info" name="button" type="submit">Registrarse</button>
       </div>
     </form>
     <div class="border-top pt-3">
       <small class="text-muted">
-        Already have an account? <a class="ml-2" href="#">Sign in</a>
+        ¿Ya tienes cuenta? <a class="ml-2" href="#">Iniciar sesión</a>
       </small>
     </div>
   </div>
