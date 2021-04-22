@@ -5,7 +5,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #f1ecec;
+  color: #444444;
+}
+
+.title-slide{
+  color: antiquewhite;
 }
 
 ul {
